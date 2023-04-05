@@ -1,0 +1,27 @@
+a[href*="google"] {
+	color: green;
+}
+
+a[href*="linkgroup"] {
+	color: red;
+}
+
+#italic:hover {
+	font-style: italic;
+}
+
+.red {
+	background-color: red;
+	color: white;
+}
+
+.blue {
+	background-color: blue;
+	color: white;
+}
+
+.new::after {
+	content: " - NEW";
+	color: yellow;
+	font-weight: bold;
+}
