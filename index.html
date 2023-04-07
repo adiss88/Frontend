@@ -1,93 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
-</head>
-<body>
-
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Animation Example</title>
-      <style>
-        body {
-          background-color: #050210;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          overflow: hidden;
-        }
-    
-        .circle {
-          position: relative;
-          width: 300px;
-          height: 300px;
-          border-radius: 50%;
-          background-image: linear-gradient(to bottom right, #fb5dad, #55fb9f, #b97aff);
-          animation: spin 2s infinite linear;
-          box-shadow: 0px 0px 20px 5px #fb5dad;
-        }
-    
-        .circle::before {
-          content: "";
-          position: absolute;
-          top: 20px;
-          left: 20px;
-          right: 20px;
-          bottom: 20px;
-          background-color: rgba(255, 255, 255, 0.2);
-          filter: blur(40px);
-          z-index: -1;
-        }
-        
-        .circle::after {
-          content: "";
-          position: absolute;
-          top: 25%;
-          left: 25%;
-          width: 50%;
-          height: 50%;
-          border-radius: 50%;
-          background-color: rgba(0, 0, 139, 0.75);
-          animation: pulse 1.5s ease-out infinite;
-        }
-        
-        .circle::before,
-        .circle::after {
-          animation-delay: 0.5s;
-        }
-    
-        @keyframes spin {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(720deg);
-          }
-        }
-        
-        @keyframes pulse {
-          0% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.5);
-            opacity: 0.5;
-          }
-          100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-        }
-      </style>
-    </head>
-    <body>
-      <div class="circle"></div>
-    </body>
-    </html>
+<html>
+  <head>
+    <title>Styling Practice</title>
+    <style>
+      a[href*="google.com"] {
+        color: green;
+      }
+      a[href*="linkgroup.com"] {
+        color: red;
+      }
+      #second-div p:nth-child(odd) {
+        background-color: red;
+      }
+      #second-div p:nth-child(even) {
+        background-color: blue;
+      }
+      #paragraph-2::after,
+      #paragraph-3::after {
+        content: " NEW";
+        color: yellow;
+      }
+      #paragraph-10:hover {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Main Heading</h1>
+    <p>Paragraph 1</p>
+    <a href="https://www.google.com">Google</a> 
+    <a href="https://www.google.com/doodles">Google Doodles</a> 
+    <a href="https://www.link-group.eu">Goto Link Group</a>
+    <h2>Subheading</h2>
+    <p id="paragraph-2">Paragraph 2</p>
+    <p id="paragraph-3">Paragraph 3</p>
+    <h3>Sub subheading</h3>
+    <div id="second-div">
+      <p>Paragraph 4</p>
+      <p>Paragraph 5</p>
+      <p>Paragraph 6</p>
+      <p>Paragraph 7</p>
+      <p>Paragraph 8</p>
+      <p>Paragraph 9</p>
+      <p id="paragraph-10">Paragraph 10</p>
+    </div>
+  </body>
+</html>
