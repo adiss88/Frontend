@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Styling Practice</title>
+	<style>
+		a[href*="google.com"], 
+		a[href^="https://www.google.com/doodles"] {
+			color: green;
+			font-style: normal;
+		}
+		a[href*="link-group.eu"],
+		#second-div a[target="_blank"]:not([href^="https://www.google.com/doodles"]) {
+			color: red;
+			font-style: normal;
+		}
+		#second-div p:nth-child(odd) {
+			background-color: red;
+		}
+		#second-div p:nth-child(even) {
+			background-color: blue;
+		}
+		#paragraph-2::after,
+		#paragraph-3::after {
+			content: " NEW";
+			color: yellow;
+		}
+		#paragraph-10:hover {
+			font-style: italic;
+		}
+		/* added styles */
+		body > h1 {
+			color: black;
+			text-align: left;
+		}
+		body > h2,
+		body > h3 {
+			text-align: left;
+		}
+		#first-div > p:after {
+			content: "";
+			color: rgb(255, 255, 255);
+		}
+		body > p:last-child:hover {
+			background-color: lightgrey;
+		}
+	</style>
+</head>
+<body>
+	<h1>Main Heading</h1>
+	<p>Paragraph 1</p>
+	<a href="https://www.google.com">Google</a> 
+	<a href="https://www.google.com/doodles">Google Doodles</a> 
+	<a href="https://www.link-group.eu">Goto Link Group</a>
+	<h2>Subheading</h2>
+	<div id="first-div">
+		<p></p>
+	</div>
+	<p id="paragraph-2">Paragraph 2</p>
+	<p id="paragraph-3">Paragraph 3</p>
+	<h3>Sub subheading</h3>
+	<div id="second-div">
+		<p>Paragraph 4</p>
+		<p>Paragraph 5</p>
+		<p>Paragraph 6</p>
+		<p>Paragraph 7</p>
+		<p>Paragraph 8</p>
+		<p>Paragraph 9</p>
+		<p id="paragraph-10">Paragraph 10</p>
+	</div>
+</body>
+</html>
